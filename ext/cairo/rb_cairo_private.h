@@ -37,11 +37,7 @@
 #  define RARRAY_LEN(array) (RARRAY(array)->len)
 #endif
 
-#ifdef HAVE_RB_ERRINFO
-#  define RB_ERRINFO (rb_errinfo())
-#else
-#  define RB_ERRINFO (ruby_errinfo)
-#endif
+#define RB_ERRINFO (rb_errinfo())
 
 extern void Init_cairo_private (void);
 extern void Init_cairo_io (void);
